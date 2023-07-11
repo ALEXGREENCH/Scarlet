@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'maven-publish'
 }
-
 android {
     compileSdkVersion versions.compileSdkVersion
 
@@ -24,7 +23,6 @@ android {
     publishing {
         singleVariant("release") {
             withSourcesJar()
-            withJavadocJar()
         }
     }
 }
@@ -37,17 +35,4 @@ dependencies {
     implementation libs.kotlin.stdlib
 
     testImplementation libs.junit
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId 'com.github.ALEXGREENCH'
-                artifactId 'scarlet-lifecycle-android'
-                version '0.0.1'
-            }
-        }
-    }
 }
