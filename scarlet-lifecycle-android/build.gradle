@@ -1,5 +1,8 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
 
 android {
     compileSdkVersion versions.compileSdkVersion
@@ -30,3 +33,15 @@ dependencies {
 }
 
 apply plugin: 'com.vanniktech.maven.publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.ALEXGREENCH'
+                artifactId = 'scarlet-lifecycle-android'
+                version = '0.0.0'
+            }
+        }
+    }
+}

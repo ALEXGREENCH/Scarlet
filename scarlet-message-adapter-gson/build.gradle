@@ -1,6 +1,9 @@
-apply plugin: 'com.vanniktech.maven.publish'
-apply plugin: 'kotlin'
-apply plugin: 'java-library'
+plugins {
+    id 'com.vanniktech.maven.publish'
+    id 'kotlin'
+    id 'java-library'
+    id 'maven-publish'
+}
 
 dependencies {
     api libs.gson
@@ -20,4 +23,16 @@ dependencies {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.ALEXGREENCH'
+                artifactId = 'scarlet-message-adapter-gson'
+                version = '0.0.0'
+            }
+        }
+    }
 }
