@@ -31,6 +31,8 @@ afterEvaluate {
                 groupId = 'com.github.ALEXGREENCH'
                 artifactId = 'scarlet-stream-adapter-rxjava'
                 version = '0.0.1'
+
+                from components.java
             }
         }
     }

@@ -27,13 +27,21 @@ android {
 }
 
 dependencies {
-    implementation project(':scarlet')
-    implementation project(':scarlet-websocket-okhttp')
-    implementation project(':scarlet-lifecycle-android')
-    implementation project(':scarlet-message-adapter-moshi')
-    implementation project(':scarlet-message-adapter-protobuf')
-    implementation project(':scarlet-stream-adapter-rxjava2')
-    implementation project(':scarlet-stream-adapter-coroutines')
+    //implementation project(':scarlet')
+    //implementation project(':scarlet-websocket-okhttp')
+    //implementation project(':scarlet-lifecycle-android')
+    //implementation project(':scarlet-message-adapter-moshi')
+    //implementation project(':scarlet-message-adapter-protobuf')
+    //implementation project(':scarlet-stream-adapter-rxjava2')
+    //implementation project(':scarlet-stream-adapter-coroutines')
+
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-websocket-okhttp:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-lifecycle-android:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-message-adapter-moshi:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-message-adapter-protobuf:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-stream-adapter-rxjava2:draft6'
+    implementation 'com.github.ALEXGREENCH.scarlet:scarlet-stream-adapter-coroutines:draft6'
 
     implementation libs.appCompat
     implementation libs.material

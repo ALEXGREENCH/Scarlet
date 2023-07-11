@@ -28,6 +28,8 @@ afterEvaluate {
                 groupId = 'com.github.ALEXGREENCH'
                 artifactId = 'scarlet-core'
                 version = '0.0.1'
+
+                from components.java
             }
         }
     }

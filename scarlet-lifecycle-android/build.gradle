@@ -39,6 +39,8 @@ afterEvaluate {
                 groupId = 'com.github.ALEXGREENCH'
                 artifactId = 'scarlet-lifecycle-android'
                 version = '0.0.1'
+
+                from components.release
             }
         }
     }

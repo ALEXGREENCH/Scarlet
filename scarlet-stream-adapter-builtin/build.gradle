@@ -21,6 +21,8 @@ afterEvaluate {
                 groupId = 'com.github.ALEXGREENCH'
                 artifactId = 'scarlet-stream-adapter-builtin'
                 version = '0.0.1'
+
+                from components.java
             }
         }
     }
