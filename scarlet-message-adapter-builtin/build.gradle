@@ -1,5 +1,4 @@
 plugins {
-    id 'com.vanniktech.maven.publish'
     id 'kotlin'
     id 'java-library'
     id 'maven-publish'
@@ -27,7 +26,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.ALEXGREENCH'
                 artifactId = 'scarlet-message-adapter-builtin'
-                version = '0.0.0'
+                version = '0.0.1'
             }
         }
     }
