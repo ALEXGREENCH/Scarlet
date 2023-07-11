@@ -20,6 +20,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+
+        //publications {
+        //    release(MavenPublication) {
+        //        groupId = 'com.github.ALEXGREENCH'
+        //        artifactId = 'scarlet-lifecycle-android'
+        //        version = '0.0.1'
+        //
+        //        from components.release
+        //    }
+        //}
+    }
 }
 
 dependencies {
@@ -30,18 +47,4 @@ dependencies {
     implementation libs.kotlin.stdlib
 
     testImplementation libs.junit
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.github.ALEXGREENCH'
-                artifactId = 'scarlet-lifecycle-android'
-                version = '0.0.1'
-
-                from components.release
-            }
-        }
-    }
 }
