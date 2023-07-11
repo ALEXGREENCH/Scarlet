@@ -1,5 +1,4 @@
 plugins {
-    id 'com.vanniktech.maven.publish'
     id 'kotlin'
     id 'java-library'
     id 'maven-publish'

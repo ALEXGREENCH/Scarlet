@@ -1,5 +1,7 @@
-apply plugin: 'com.vanniktech.maven.publish'
-apply plugin: 'kotlin'
+plugins {
+    id 'kotlin'
+    id 'maven-publish'
+}
 
 dependencies {
     implementation project(':scarlet-core')
