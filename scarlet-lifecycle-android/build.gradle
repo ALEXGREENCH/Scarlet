@@ -7,8 +7,6 @@ android {
     defaultConfig {
         minSdkVersion versions.minSdkVersionAndroidLifecycle
         targetSdkVersion versions.targetSdkVersion
-        versionCode 1
-        versionName "${version}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
