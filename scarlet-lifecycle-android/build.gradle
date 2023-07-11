@@ -20,6 +20,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -35,14 +42,11 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            android.libraryVariants.all { variant ->
-
-                "maven${variant.name.capitalize()}Aar"(MavenPublication) {
-                    from components.findByName("android${variant.name.capitalize()}")
-                    groupId 'com.github.ALEXGREENCH'
-                    artifactId 'scarlet-lifecycle-android'
-                    version "0.0.1"
-                }
+            release(MavenPublication) {
+                from components.release
+                groupId 'com.github.ALEXGREENCH'
+                artifactId 'scarlet-lifecycle-android'
+                version '0.0.1'
             }
         }
     }

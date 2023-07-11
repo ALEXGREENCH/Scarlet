@@ -29,7 +29,7 @@ android {
 dependencies {
 
     // FOR TESTING
-    //def scarletVersion = "draft9"
+    //def scarletVersion = "draft11"
 //
     //implementation "com.github.ALEXGREENCH.scarlet:scarlet:$scarletVersion"
     //implementation "com.github.ALEXGREENCH.scarlet:scarlet-websocket-okhttp:$scarletVersion"
