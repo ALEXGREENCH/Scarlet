@@ -32,8 +32,6 @@ dependencies {
     testImplementation libs.junit
 }
 
-apply plugin: 'com.vanniktech.maven.publish'
-
 afterEvaluate {
     publishing {
         publications {

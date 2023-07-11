@@ -13,3 +13,15 @@ dependencies {
     testImplementation libs.kotlin.reflect
     testImplementation libs.assertJ
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.ALEXGREENCH'
+                artifactId = 'scarlet-stream-adapter-builtin'
+                version = '0.0.0'
+            }
+        }
+    }
+}
